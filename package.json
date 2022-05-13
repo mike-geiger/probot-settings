@@ -17,7 +17,8 @@
     "test:unit": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest 'test/unit/'",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest --test-timeout=10000 'test/integration/'",
-    "test:integration:debug": "LOG_LEVEL=debug DEBUG=nock.* run-s test:integration"
+    "test:integration:debug": "LOG_LEVEL=debug DEBUG=nock.* run-s test:integration",
+    "postinstall": "tsc --outDir ./build"
   },
   "author": "Brandon Keepers",
   "license": "ISC",
